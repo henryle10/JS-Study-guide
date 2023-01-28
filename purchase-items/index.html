@@ -1,0 +1,57 @@
+<!-- NO CHANGES NEED TO BE MADE TO THIS FILE -->
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.scss" />
+</head>
+
+<body>
+    <!-- Create Person Row -->
+    <div id="creator-row">
+        <span>Full Name:</span>
+        <input id="name-input" />
+        <br />
+        <button onclick="createPerson()">Create Person</button>
+    </div>
+
+    <!-- Select Person/Item consume row -->
+    <div id="consume-row">
+        <!-- Choose Person -->
+        <div class="consume-row-content-wrapper">
+            <label for="person-list">Choose a person:</label>
+            <select name="person-list" id="people-dropdown">
+                <option value="" disabled selected>Select person</option>
+            </select>
+        </div>
+        <!-- Choose Item -->
+        <div class="consume-row-content-wrapper">
+            <label for="item-list">Choose an item:</label>
+            <select name="item-list" id="item-dropdown">
+                <option value="" disabled selected>Select item</option>
+            </select>
+        </div>
+        <!-- Consume item for selected person -->
+        <button onclick="purchase()">Purchase</button>
+    </div>
+
+    <!-- Table displaying all created persons and person details -->
+    <div id="person-table-wrapper">
+        <table id="person-table">
+            <thead>
+                <tr class="header-row">
+                    <th class="name-col">Name</th>
+                    <th class="balance-col">Balance ($)</th>
+                    <th class="consumed-col">Items</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+
+<!-- Required project script files -->
+<script src="classes.js"></script>
+<script src="main.js"></script>
+
+</html>
